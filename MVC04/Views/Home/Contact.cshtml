@@ -1,0 +1,25 @@
+﻿@model MVC04.Models.Company
+
+@Html.TextBoxFor(m => m.CompanyName)
+<br />
+<br />
+@Html.DropDownListFor(m => m.Departments, new SelectList(Model.Departments, "Id", "Name"), "Select Department Strongly Typed")
+
+<br />
+<br />
+<h3> Radio button demo</h3>
+@using (Html.BeginForm())
+{
+    foreach (var department in Model.Departments)
+    {
+        @Html.RadioButtonFor(m => m.SelectedDepartment, department.Id,
+                            (department.IsSelected.HasValue && department.IsSelected.Value) ? new {@checked="checked" } : null)
+                            @department.Name
+       <br/>
+    }
+    <br />
+    <br />
+    <input type="submit" value="Submit" />
+}        
+
+ 

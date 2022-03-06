@@ -1,0 +1,13 @@
+﻿@model MVC05.Models.Employee
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (@Html.BeginForm())
+{
+    @*@Html.DisplayForModel()*@
+    @Html.EditorForModel()
+}

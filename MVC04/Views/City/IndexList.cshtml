@@ -1,0 +1,15 @@
+﻿@model MVC04.ViewModel.CitiesViewModel
+
+@{
+    ViewBag.Title = "IndexList";
+}
+
+<h2>IndexList</h2>
+
+@using (@Html.BeginForm())
+{
+    @Html.ListBoxFor(x => x.SelectedCities, Model.Cities)
+    <br />
+    <input type="submit" value="Submit"/>
+
+}

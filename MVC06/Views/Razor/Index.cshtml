@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@for (int i = 1; i <= 5; i++)
+{
+    <b>@i</b>
+}
+
+@{
+    int SumOfEvenNumbers = 0;
+    int SumOfOddNumbers = 0;
+
+    for (int i = 1; i <= 5; i++)
+    {
+        if (i % 2 == 0)
+        {
+            SumOfEvenNumbers = SumOfEvenNumbers + i;
+        }
+        else
+        {
+            SumOfOddNumbers = SumOfOddNumbers + i;
+        }
+    }
+}
+
+<h3>Sum of Even numbers =@SumOfEvenNumbers </h3>
+<h3>Sum of Odd numbers =@SumOfOddNumbers </h3>
+
+@{
+    for (int i = 1; i <= 5; i++)
+    {
+        <b>@i</b>
+        if (i % 2 == 0)
+        {
+            <text>-Even </text>
+        }
+        else
+        {
+            <text>-Odd </text>
+        }
+        <br />
+    }
+}
+<br />
+@{
+    for (int i = 1; i <= 5; i++)
+    {
+        <b>@i</b>
+        if (i % 2 == 0)
+        {
+             @:-Even  
+        }
+        else
+        {
+            @:-Odd  
+        }
+        <br />
+    }
+}
+
+@*This is my comment*@
+<br/>
+
+@{ 
+    int day = 31;
+    int month = 12;
+    int year = 2013;
+}
+
+Date is @day-@month-@year
+<br/>
+This is my email address <br/>
+<b>kudvenkat@gmail.com</b>
+
+<br/>
+I will meet you <b>@@ office</b>

@@ -1,0 +1,21 @@
+﻿
+@model IEnumerable<MVC02.Models.Department>
+@using MVC02.Models;
+
+@{
+    ViewBag.Title = "Departments List DB";
+}
+
+
+<div style="font-family:Arial">
+    <h2>Departments List</h2>
+    <hr />
+    <ul>
+        @foreach (Department department in @Model)
+        {
+            <li>
+                @Html.ActionLink(department.Name, "Index", "Employee", new { departmentId = department.Id }, null)
+            </li>
+        }
+    </ul>
+</div>

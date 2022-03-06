@@ -1,0 +1,60 @@
+﻿<div style="font-family:Arial">
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+    <h2>Students</h2>
+    <script type="text/javascript" language="javascript">
+        function clearResults() {
+            $('#divStudents').empty();
+
+        }
+
+        function CancelCall() {
+            if (1 == 2) {
+                return true;
+            }
+            else {
+                alert('Action method will not be invoked');
+                return false;
+            }
+        }
+
+        function CountRows() {
+            alert($('#studentsTable tr').length - 1) + ' rows retrived';
+        }
+
+
+    </script>
+
+
+    @Ajax.ActionLink("All", "All", new AjaxOptions()
+{
+    HttpMethod = "GET",
+    UpdateTargetId = "divStudents",
+    InsertionMode = InsertionMode.Replace,
+    OnBegin = "CancelCall"
+})
+
+    <span style="color:Blue"></span>
+    @Ajax.ActionLink("Top 3", "Top3", new AjaxOptions()
+{
+    HttpMethod = "GET",
+    UpdateTargetId = "divStudents",
+    InsertionMode = InsertionMode.Replace,
+    OnBegin = "ClearResults"
+})
+
+    <span style="color:Blue"></span>
+    @Ajax.ActionLink("Bottom 3", "Bottom3", new AjaxOptions()
+{
+    HttpMethod = "GET",
+    UpdateTargetId = "divStudents",
+    InsertionMode = InsertionMode.Replace,
+    OnBegin = "ClearResults"
+})
+
+
+    <div id="divStudents">
+
+    </div>
+</div>

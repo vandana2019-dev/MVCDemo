@@ -1,0 +1,57 @@
+﻿@model MVC05.Models.Employee
+@*@using MVC05.CustomHtmlHelper;*@
+@*Add the above namespace under Shared/web.config so that it is shared accross all*@
+
+@{
+    ViewBag.Title = "EmployeeDetailsImagesView";
+}
+
+<h2>EmployeeDetailsImagesView</h2>
+
+<div style="font-family:Arial">
+    <div>
+        <h4>Employee</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Gender)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Gender)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.City)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.City)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Photo)
+            </dt>
+
+            <dd>
+                <img src="@Url.Content(Model.Photo)" alt="@Model.alternatetext" />
+            </dd>
+            <dd>
+                @Html.Image(Model.Photo, Model.alternatetext)
+            </dd>
+            <dd>
+              @Html.Raw(@Html.Image2(Model.Photo, Model.alternatetext))
+            </dd>
+            
+        </dl>
+    </div>
+
+</div>

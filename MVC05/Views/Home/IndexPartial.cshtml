@@ -1,0 +1,14 @@
+﻿
+@model IEnumerable<MVC05.Models.Employee>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@foreach (var item in Model)
+{
+    @Html.Partial("_Employee", item)
+    <br/>
+    <br/>
+    //{ Html.RenderPartial("_Employee", item); }
+}

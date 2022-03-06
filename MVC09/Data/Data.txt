@@ -1,0 +1,9 @@
+﻿
+Home-> IndexActionInvoked -> OnActionExecuting 	-23/02/2022 11:46:52 pm
+
+Home-> IndexActionInvoked -> OnActionExecuted 	-23/02/2022 11:46:52 pm
+
+Home-> IndexActionInvoked -> OnResultExecuting 	-23/02/2022 11:46:52 pm
+
+Home-> IndexActionInvoked -> OnResultExecuted 	-23/02/2022 11:46:52 pm
+-------------------------

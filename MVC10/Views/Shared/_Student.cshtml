@@ -1,0 +1,28 @@
+﻿@model IEnumerable<MVC10.Models.Student>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table id="studentsTable" style="border:1px solid black; background-color:silver" back class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalMarks)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalMarks)
+        </td>
+    </tr>
+}
+
+</table>

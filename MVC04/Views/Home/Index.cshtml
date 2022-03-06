@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h3> Html Helpers</h3>
+<input type="text" id="txtfirstname" />
+@Html.TextBox("firstname")
+@Html.TextBox("lastname", "caringula")
+@Html.TextBox("Gender", "Female", new { style = "background-color:Red; color:White; font-weight:bold" })
+@Html.TextBox("City", "Wellington", new { @class = "greentextbox", @readonly = "true" })
+
+<br />
+@Html.Password("Password")
+@Html.TextArea("Comments", "", 5, 20, null)
+
+@Html.Hidden("id")
+
+<br />
+
+@Html.DropDownList("Gender",
+                        new List<SelectListItem> {
+                          new SelectListItem { Text = "Male", Value = "Male"},
+                          new SelectListItem { Text = "Female", Value = "Female", Selected=true}
+                        }, "Select Gender")
+
+ 
+
+@Html.DropDownList("DepartmentsInCode",
+                        new List<SelectListItem> {
+                          new SelectListItem { Text = "IT", Value = "1"},
+                          new SelectListItem { Text = "HR", Value = "2"},
+                          new SelectListItem { Text = "Payroll", Value = "3"}
+                        }, "Select Department")
+
+@Html.DropDownList("Departments", "Select Department")
+<style>
+    .greentextbox {
+        background-color: green;
+        color: White;
+        font-weight: bold;
+    }
+</style>
